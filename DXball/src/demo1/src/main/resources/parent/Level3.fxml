@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #111111;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parent.Level3">
+    <children>
+        <Button fx:id="startButton" cancelButton="true" layoutX="214.0" layoutY="228.0" mnemonicParsing="false" onAction="#startGameButtonAction" prefHeight="51.0" prefWidth="173.0" text="START">
+            <font>
+                <Font size="24.0" />
+            </font>
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <Button fx:id="resume" cancelButton="true" layoutX="214.0" layoutY="228.0" mnemonicParsing="false" onAction="#resumeGame" prefHeight="51.0" prefWidth="173.0" text="RESUME" visible="false">
+            <font>
+                <Font size="24.0" />
+            </font>
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <Circle fx:id="circle" fill="#ffffffd4" layoutX="300.0" layoutY="300.0" radius="5.0" stroke="WHITE" strokeType="INSIDE">
+            <effect>
+                <Glow />
+            </effect></Circle>
+        <Rectangle fx:id="paddle" arcHeight="6.0" arcWidth="5.0" fill="WHITE" height="10.0" layoutX="256.0" layoutY="344.0" stroke="#fff1f1" strokeType="INSIDE" strokeWidth="3.0" width="88.0">
+            <effect>
+                <Glow />
+            </effect></Rectangle>
+        <Rectangle fx:id="bottomZone" arcHeight="2.0" arcWidth="5.0" fill="TRANSPARENT" height="10.0" layoutY="395.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+        <Text fx:id="text1" fill="WHITE" layoutX="383.0" layoutY="28.0" stroke="#da0f0f" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="76.13671875">
+            <font>
+                <Font size="14.0" />
+            </font></Text>
+        <Text fx:id="text2" fill="WHITE" layoutX="170.0" layoutY="27.0" stroke="#d74444" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="88.0">
+            <font>
+                <Font name="Comic Sans MS Italic" size="14.0" />
+            </font></Text>
+        <Label fx:id="gameOverLabel" layoutX="219.0" layoutY="175.0" prefHeight="35.0" prefWidth="173.0" text="    Game Over" textFill="WHITE" visible="false">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="exitButton" layoutX="216.0" layoutY="231.0" mnemonicParsing="false" onAction="#gameOver" prefHeight="44.0" prefWidth="167.0" text="Exit" visible="false">
+            <effect>
+                <InnerShadow />
+            </effect>
+            <font>
+                <Font size="24.0" />
+            </font></Button>
+        <Label fx:id="congo_msg" layoutX="4.0" layoutY="124.0" prefHeight="51.0" prefWidth="594.0" text="Congratulations Game Completed!!!!" textFill="WHITE" visible="false">
+            <font>
+                <Font name="Comic Sans MS" size="36.0" />
+            </font>
+        </Label>
+        <Button fx:id="next_lev" layoutX="115.0" layoutY="224.0" mnemonicParsing="false" onAction="#gameOver" prefHeight="59.0" prefWidth="370.0" text="Go To Game Over Page" visible="false">
+            <font>
+                <Font size="18.0" />
+            </font>
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <Label layoutX="278.0" layoutY="12.0" text="Level 3" textFill="WHITE">
+            <font>
+                <Font name="Comic Sans MS Italic" size="14.0" />
+            </font>
+        </Label>
+      <Button fx:id="pause_game" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#pause_game" text="Pause">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Rectangle fx:id="top_zone" arcHeight="5.0" arcWidth="5.0" fill="#fefeff" height="4.0" layoutX="-3.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="608.0" />
+      <Button fx:id="exitToMenu" layoutX="532.0" layoutY="10.0" mnemonicParsing="false" onAction="#swtichToMenu" text="EXIT">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+    </children>
+</AnchorPane>
